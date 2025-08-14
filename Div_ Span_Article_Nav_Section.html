@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours HTML — Div, Span, Article, Nav, Section</title>
+</head>
+<body>
+
+<!-- 
+Résumé des balises utilisées dans ce document :
+
+<div>    : Sert à regrouper des éléments pour appliquer du style ou organiser le contenu.
+          Pas de signification sémantique particulière.
+
+<span>   : Sert à mettre en forme une portion de texte à l’intérieur d’une ligne.
+          Pas de signification sémantique particulière.
+
+<article>: Contenu autonome et indépendant, pouvant être partagé ou réutilisé séparément.
+          Exemple : article de blog, news, commentaire.
+
+<section>: Section thématique du document. Contient souvent un titre (<h1> à <h6>).
+          Permet d’organiser le contenu par thèmes.
+
+<nav>    : Contient des liens de navigation vers différentes sections ou pages.
+          Indique clairement au navigateur et aux lecteurs d’écran qu’il s’agit d’un menu.
+-->
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Accueil</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section d'accueil -->
+    <section id="home">
+        <h1>Bienvenue sur mon site</h1>
+        <div border="1" cellpadding="5">
+            <p>Voici un paragraphe regroupé dans une div.</p>
+            <p>Un mot <span><b>important</b></span> est mis en valeur avec un span.</p>
+        </div>
+    </section>
+
+    <!-- Section Blog -->
+    <section id="blog">
+        <h2>Articles récents</h2>
+        <article>
+            <h3>Mon premier article</h3>
+            <p>Contenu de l'article autonome.</p>
+        </article>
+        <article>
+            <h3>Deuxième article</h3>
+            <p>Encore un autre article indépendant.</p>
+        </article>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact">
+        <h2>Contactez-moi</h2>
+        <p>Email : <span><b>contact@mon-site.com</b></span></p>
+    </section>
+
+</body>
+</html>
