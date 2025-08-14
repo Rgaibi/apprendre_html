@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours HTML — Les iframes</title>
+</head>
+<body>
+
+    <h1>La balise &lt;iframe&gt;</h1>
+
+    <!-- 
+        <iframe> : intègre une page ou un contenu externe dans notre page HTML
+        width : largeur de l'iframe (en pixels ou %)
+        height : hauteur de l'iframe (en pixels)
+        frameborder : 0 = pas de bordure, 1 = bordure visible
+        allow : définit les permissions (micro, caméra, plein écran, etc.)
+        
+    -->
+
+    <!-- Exemple d'intégration d'une page externe (site réel) -->
+    <iframe 
+        src="https://fr.wikipedia.org/wiki/HTM" 
+        width="800" 
+        height="600" 
+        frameborder="0"
+        allow="fullscreen"
+        title="wiki html">
+    </iframe>
+
+    <!-- Exemple avec une vidéo YouTube (vidéo réelle) -->
+    <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Lecteur vidéo YouTube" 
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen">
+    </iframe>
+    
+    <!-- Exemple avec google maps -->
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d37882.00065895947!2d-0.5418634585411121!3d45.6584391841994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4800f90f35014099%3A0x5548be5b51f9771a!2s17800%20Montils!5e0!3m2!1sfr!2sfr!4v1755195838727!5m2!1sfr!2sfr"
+        width="600" 
+        height="450" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+</body>
+</html>
