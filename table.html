@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours HTML — Les tableaux</title>
+</head>
+<body>
+
+    <h1>Les tableaux en HTML</h1>
+
+    <!-- 
+        <table> : définit un tableau
+        <tr> : définit une ligne du tableau (table row)
+        <td> : définit une cellule (table data)
+        <th> : cellule d’en-tête (table header), texte en gras et centré par défaut
+        <thead> : regroupe l’en-tête du tableau
+        <tbody> : contient le corps du tableau
+        <tfoot> : pied du tableau (souvent pour totaux ou résumés)
+        colspan : fusionner des colonnes
+        rowspan : fusionner des lignes
+    -->
+
+    <table>
+        
+        <!-- En-tête du tableau -->
+        <thead>
+            <tr>
+                <th>Jour</th>
+                <th>Matin</th>
+                <th>Après-midi</th>
+                <th>Soir</th>
+            </tr>
+        </thead>
+
+        <!-- Corps du tableau -->
+        <tbody>
+            <tr>
+                <th>Lundi</th>
+                <td rowspan="2">Travail</td> <!-- rowspan : fusionne 2 lignes -->
+                <td>Réunion</td>
+                <td>Dîner</td>
+            </tr>
+            <tr>
+                <th>Mardi</th>
+                <td>Formation</td>
+                <td>Détente</td>
+            </tr>
+            <tr>
+                <th>Mercredi</th>
+                <td>Sport</td>
+                <td colspan="2">Sortie cinéma</td> <!-- colspan : fusionne 2 colonnes -->
+            </tr>
+        </tbody>
+
+        <!-- Pied du tableau -->
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td colspan="3">3 jours planifiés</td>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>
