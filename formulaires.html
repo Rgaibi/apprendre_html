@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Cours HTML — Les formulaires</title>
+</head>
+<body>
+
+<!-- 
+    Cours sur les formulaires HTML
+
+    <form>       : Conteneur du formulaire.
+    action       : URL où les données seront envoyées (fichier ou page côté serveur).
+    method       : Méthode HTTP utilisée ("GET" ou "POST").
+
+    <fieldset>   : Regroupe visuellement des champs de formulaire.
+    <legend>     : Titre du fieldset.
+
+    <label for>  : Étiquette liée à un champ (l'attribut "for" doit correspondre à l'id du champ).
+
+    <input>      : Champ de saisie.
+       - type="text"       : Champ texte.
+       - type="password"   : Champ mot de passe.
+       - type="checkbox"   : Case à cocher.
+       - type="radio"      : Bouton radio (sélection unique par groupe).
+       - type="file"       : Sélection de fichier.
+       - type="date"       : Sélecteur de date.
+       - type="submit"     : Bouton d’envoi.
+
+    Attributs courants pour <input> :
+       - name       : Nom de la donnée envoyée.
+       - id         : Identifiant unique (lié au label).
+       - checked    : Case cochée ou bouton radio sélectionné par défaut.
+       - placeholder: Texte indicatif dans un champ.
+       - required   : Champ obligatoire.
+
+    <textarea>   : Zone de texte multiligne.
+       - cols / rows : Largeur et hauteur en nombre de caractères/lignes.
+
+    <select>     : Liste déroulante.
+       - <option>    : Option dans la liste.
+       - <optgroup>  : Groupe d’options avec un titre.
+-->
+
+<h1>Formulaire d'exemple</h1>
+
+<form action="/traitement" method="post">
+
+    <fieldset>
+        <legend>Informations personnelles</legend>
+
+        <label for="nom">Nom :</label>
+        <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+        <br><br>
+
+        <label for="mdp">Mot de passe :</label>
+        <input type="password" id="mdp" name="mdp" required>
+        <br><br>
+
+        <label for="dateNaissance">Date de naissance :</label>
+        <input type="date" id="dateNaissance" name="dateNaissance">
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Préférences</legend>
+
+        <p>Sexe :</p>
+        <input type="radio" id="homme" name="sexe" value="Homme" checked>
+        <label for="homme">Homme</label>
+
+        <input type="radio" id="femme" name="sexe" value="Femme">
+        <label for="femme">Femme</label>
+
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="cgu" required>
+            J'accepte les conditions générales
+        </label>
+
+        <br><br>
+
+        <label for="fichier">Photo de profil :</label>
+        <input type="file" id="fichier" name="fichier">
+
+        <br><br>
+
+        <label for="pays">Pays :</label>
+        <select id="pays" name="pays">
+            <optgroup label="Europe">
+                <option value="france">France</option>
+                <option value="espagne">Espagne</option>
+            </optgroup>
+            <optgroup label="Amérique">
+                <option value="canada">Canada</option>
+                <option value="usa">États-Unis</option>
+            </optgroup>
+        </select>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Message</legend>
+        <label for="message">Votre message :</label><br>
+        <textarea id="message" name="message" cols="40" rows="5" placeholder="Écrivez ici..."></textarea>
+    </fieldset>
+
+    <br>
+
+    <input type="submit" value="Envoyer le formulaire">
+
+</form>
+
+</body>
+</html>
